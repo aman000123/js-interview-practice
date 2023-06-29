@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview questions last</title>
+    <style>
+        div {
+            padding: 50px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gparent">Grand parent
+        <div id="parent"> Parent
+            <div id="child">
+                Child
+            </div>
+        </div>
+    </div>
+
+
+    <div id="gparent1">Grand parent
+        <div id="parent1"> Parent
+            <div id="child1">
+                Child
+            </div>
+        </div>
+    </div>
+    <!-- <script src="interviewQuestion1.js"></script> -->
+    <!-- <script src="var-let-const.js"></script>
+    <script src="ArrayQuestion.js"></script> -->
+    <!-- <script src="cookie.js"></script>
+    <script src="localstorage.js"></script>
+    <script src="sessionstorage.js"></script> -->
+
+    <!-- <script src="protoype.js"></script> -->
+    <!-- <script src="map.js"></script> -->
+    <!-- <script src="prototype.js"></script> -->
+    <script src="this.js"></script>
+    <script>
+
+        //examples of event bubbling
+
+        //child=>pareny=>grandparent//////////
+
+        //callback me argument false dete hain
+        document.querySelector('#gparent').addEventListener('click', () => {
+            console.log("grandparent")
+        },
+            false);
+        document.querySelector('#parent').addEventListener('click', () => {
+            console.log("parent")
+        },
+            false);
+        document.querySelector('#child').addEventListener('click', () => {
+            console.log("child")
+        },
+            false);
+
+
+
+
+
+        //examples of event caturings
+        //callback me true dete hain
+
+
+        //grandparent=>parent=>child
+        document.querySelector('#gparent1').addEventListener('click', () => {
+            console.log("grandparent")
+        },
+            true);
+        document.querySelector('#parent1').addEventListener('click', () => {
+            console.log("parent")
+        },
+            true);
+        document.querySelector('#child1').addEventListener('click', () => {
+            console.log("child")
+        },
+            true);
+    </script>
+</body>
+
+</html>
